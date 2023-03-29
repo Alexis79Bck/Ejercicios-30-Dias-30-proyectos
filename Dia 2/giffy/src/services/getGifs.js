@@ -4,7 +4,7 @@
  *
  */
 
-const API_KEY = "UzAzcT7Xe7jKfBKuCGY9l7iU11GJJ01i";
+const API_KEY = process.env.REACT_GIPHY_API_KEY;
 
 export default function getGifs({ keyword = "relax" } = {}) {
   const API_URL = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${keyword}&limit=25&offset=0&rating=r&lang=es`;
